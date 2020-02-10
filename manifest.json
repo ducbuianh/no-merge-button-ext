@@ -1,0 +1,28 @@
+{
+  "name": "No Merge Button",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created by DucBA",
+  "homepage_url": "https://pixta.vn",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/pixta-dev/*",
+        "https://git.pixtavietnam.com/pixta-dev/*",
+        "https://gitlab.pixtavietnam.com/pixta-dev/*"
+      ],
+      "js": ["js/content.js"]
+    }
+  ]
+}
